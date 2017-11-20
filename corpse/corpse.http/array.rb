@@ -10,6 +10,7 @@ class Array
       "-" => {:tag => "list", :stash => true},
       "#" => {:tag => "code", :stash => true},
       "?" => {:tag => "note"},
+      ":" => {:tag => "info"},
       "*" => {:tag => "h2"},
       "=" => {:tag => "h3"},
       "+" => {:tag => "hs"},

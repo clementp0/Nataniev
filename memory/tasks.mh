@@ -2,112 +2,35 @@
 ~ NOTE : YAML
 ~ AUTH : Devine Lu Linvega
 
-THE DAILY DESCENT
-  General
-    Create Twitter/Rotonde feed
-    Auto update
-    Link Shortener
-    Inject filter from url hash ex: /#entry-1
-  Services
-    Basic draft($discover)
-
-IDE
-  Navi
-    Display file with changes
-    Highlight active file
-  Editor
-    .replace
-    .save/rename <path>
-
 MARABU
   Pattern
     Change time signature
     Change BPM
 
+MARKL
+  General
+    Level selection stage
+
+ROTONDE
+  General
+    Discovery/Networks tab
+
+LEFT
+  General
+    Open multiple files at once.
+
 RONIN
   Tools
     Zoom in/out
-    Export with size
     Half-tone painting
-
-HUNDRED RABBITS
-  Video
-    Nataniev Capsule
-  Soundtrack
-    Release 17Q1  
-
-LOBBY
-  Generic
-    Save lobby settings into file
-    Load lobby settings on launch
-    Give warning on window close
-    Splash
-    .set_theme
-    Add soyuz theme(orange/black)
-    Update tree from commander
-  App
-    Dynamic reload
-    .end
-    application descriptions
-
-WIKTOPHER
-  Write synopsis
-
-OSCEAN
-  Generic
-    Write Lobby docs
-    Write sailing notes docs
-    Write breathing exercises
-  Horaire
-    Migrate to equal-month calendar
+    Chromatic Filter
+    Theme support
 
 UNTITLED?
   Generic
     Build 3d software
-
-THOUSAND ROOMS
-  Generic
-    Fix Amazon Version
-
-CORTEGE
-  Send invoice
-
-DONSOL
-  Generic
-    Port to Ionic
-
-OQUONIE
-  Generic
-    Port to Ionic
+    Build audio player
 
 NEAUISMETICA
   Generic
     Complete draft of Two Mansion
-
-INSTRUMENT
-  Generic
-    Display Position
-    Display Course
-    Display Speed(knots)
-    Display Orientation
-    Display Keeling
-  Features
-    Night mode
-    Display battery warning
-    Set Anchor mode
-
-CHILDREN KNOT BOOK
-  Draft
-    Choose knots
-
-PINO
-  Departure NZ
-    Swap reef lines
-    Fill diesel tanks
-    Fold Iggy
-    Grease furler
-    Test Iridium
-    Get health insurance
-    Print documents
-    
-

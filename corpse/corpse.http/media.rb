@@ -4,6 +4,7 @@
 class Media
 
   attr_accessor :cat
+  attr_accessor :frames
 
   def initialize cat, id ,cl = ""
 
@@ -11,6 +12,9 @@ class Media
     @cat = cat.to_s.downcase.gsub(" ",".")
     @class = cl
 
+    @frames = @id.include?(">>") ? @id.split(">>")[1].to_i : nil
+    @id = @id.include?(">>") ? @id.split(">>")[0] : @id
+  
   end
 
   def exists
@@ -42,7 +46,15 @@ class Media
 
   def to_s
 
-    if File.exist?("#{path}/#{@cat}/#{@id}.mp4")
+    if @frames
+      html = ""
+      f = 0
+      while f < @frames
+        html += "<media #{@class ? "class='gallery #{@class}'" : ""} style='background-image:url(#{path.split('public/').last}/#{@cat}/#{@id}.#{f}.jpg);#{@style}'></media>"
+        f += 1
+      end
+      return "<gallery>#{html}</gallery>"
+    elsif File.exist?("#{path}/#{@cat}/#{@id}.mp4")
       return "<video #{@class ? "class='#{@class}'" : ""} style='#{@style}' autoplay loop><source src='#{path.sub('public/','')}/#{@cat}/#{@id}.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
     elsif File.exist?("#{path}/#{@cat}/#{@id}.jpg")
       return "<media #{@class ? "class='#{@class}'" : ""}  style='background-image:url(#{path.split('public/').last}/#{@cat}/#{@id}.jpg);#{@style}'></media>"
@@ -51,7 +63,7 @@ class Media
     elsif File.exist?("#{path}/#{@cat}/#{@id}.svg")
       return "<media #{@class ? "class='#{@class}'" : ""} style='background-image:url(#{path.split('public/').last}/#{@cat}/#{@id}.svg);#{@style}'></media>"
     end
-    puts "<alert>Missing: #{path}/#{@cat}/#{@id}</alert>"
+    puts "<alert>Missing: #{path}/#{@cat}/#{@id}[#{@frames}]</alert>"
     return ""
 
   end
