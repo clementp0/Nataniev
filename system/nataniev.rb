@@ -32,14 +32,13 @@ class Nataniev
     invoke  = parts[0] ? parts[0] : "ghost"
     action  = parts[1] ? parts[1].to_sym : :help
     params  = q.sub("#{invoke} #{action}","").strip
+    vessel  = summon(invoke)
 
-    return summon(invoke).act(action,params)
+    return vessel.act(action,params)
 
   end
 
   def summon invoke
-
-    if @vessels[invoke.to_sym] then return @vessels[invoke.to_sym] end
 
     @vessels[invoke.to_sym] = Ghost.new(invoke)
 
@@ -48,13 +47,6 @@ class Nataniev
     return @vessels[invoke.to_sym]
 
   end
-
-  def vessel
-
-    return @vessels.first
-
-  end
-
 
   #
 

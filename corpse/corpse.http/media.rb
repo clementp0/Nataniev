@@ -55,7 +55,7 @@ class Media
       end
       return "<gallery>#{html}</gallery>"
     elsif File.exist?("#{path}/#{@cat}/#{@id}.mp4")
-      return "<video #{@class ? "class='#{@class}'" : ""} style='#{@style}' autoplay loop><source src='#{path.sub('public/','')}/#{@cat}/#{@id}.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
+      return "<video #{@class ? "class='#{@class}'" : ""} style='#{@style}' autoplay loop><source src='#{path.split('public/').last}/#{@cat}/#{@id}.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
     elsif File.exist?("#{path}/#{@cat}/#{@id}.jpg")
       return "<media #{@class ? "class='#{@class}'" : ""}  style='background-image:url(#{path.split('public/').last}/#{@cat}/#{@id}.jpg);#{@style}'></media>"
     elsif File.exist?("#{path}/#{@cat}/#{@id}.png")
